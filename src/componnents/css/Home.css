@@ -1,0 +1,61 @@
+body {
+    background-color: #f2f3f5;
+    font-family: Yekan;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #f9fafb;
+    height: 48px;
+}
+
+.navbar > div {
+    margin: 10px 40px 0 40px;
+}
+
+.login {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    color: #808080;
+    cursor: pointer;
+    font-size: 15px;
+    height: 28px;
+    width: 120px;
+    font-family: Yekan;
+}
+
+.category {
+    margin: 0 10px;
+    border: none;
+    background-color: transparent;
+    color: #808080;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: Yekan;
+}
+
+.category:hover{
+    color: #d73948;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 250px;
+}
+
+.search {
+    width: auto;
+}
+.searchbar {
+    text-align: right;
+    font-family: Yekan;
+}
+
+h1{
+    color: #d73948;
+}
