@@ -1,7 +1,7 @@
 import React from 'react';
 import './css/loginModel.css'
 
-const ProductModal = ({Detail,Show,Close}) => {
+const loginModal = ({Detail,Show}) => {
 
     return (
         <div className='modal' style={{display:Show}} >
@@ -13,7 +13,7 @@ const ProductModal = ({Detail,Show,Close}) => {
                     {Detail}
                 </div>
                 <div className='modal-footer'>
-                    <button onClick={Close}> Close </button>
+                                                            
                 </div>
             </div>
         </div>
@@ -21,4 +21,4 @@ const ProductModal = ({Detail,Show,Close}) => {
 
 }
 
-export default ProductModal;
+export default loginModal;
