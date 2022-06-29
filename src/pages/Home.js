@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import ReactDOM from 'react-dom/client';
+import React from 'react';
 import logo from '../assets/torob_logo.svg';
 import magnifier from '../assets/search.svg';
 import Modal from 'react-modal'

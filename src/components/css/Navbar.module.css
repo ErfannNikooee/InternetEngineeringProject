@@ -19,21 +19,6 @@
     margin:0 2rem;
 }
 
-/* .category {
-    margin: 0 10px;
-    border: none;
-    background-color: transparent;
-    color: #808080;
-    cursor: pointer;
-    font-size: 16px;
-    font-family: Yekan;
-
-} */
-/* .category:hover {
-    color: #d73948;
-} */
-
-
 .modalheader>div {
     text-align: left;
 }
@@ -68,21 +53,6 @@
 }
 
 
-
-.form-input--invalid label,
-.form-input--invalid p {
-    color: red;
-}
-
-.form-input--invalid p{
-    font-size: 14px;
-}
-
-.form-input--invalid input {
-    border: 1px solid red;
-    background: #ffd1d1;
-}
-
 .btn {
     position: relative;
     bottom: -36px;
@@ -92,10 +62,6 @@
     height: 0px;
 }
 
-#password {
-    padding-left: 35px;
-    padding-top: 2px;
-}
 
 .visiblity {
     display: none;
@@ -105,25 +71,6 @@
     width: 27px;
     height: 21px;
     color: #cdcdcd;
-}
-
-#signbtn {
-    background-color: #d73948;
-    border: none;
-    border-radius: 5px;
-    width: 30%;
-    height: 30px;
-    color: white;
-    font-family: Yekan;
-    font-size: 17px;
-    cursor: pointer;
-}
-
-#changesign {
-    font-size: 15px;
-    color: rgb(51, 122, 183);
-    cursor: pointer;
-    display: block;
 }
 
 .links{

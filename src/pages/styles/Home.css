@@ -70,3 +70,41 @@ span {
     color: #808080;
     font-size: 14px;
 }
+
+.form-input--invalid label,
+.form-input--invalid p {
+    color: red;
+}
+
+.form-input--invalid p{
+    font-size: 14px;
+}
+
+.form-input--invalid input {
+    border: 1px solid red;
+    background: #ffd1d1;
+}
+
+#password {
+    padding-left: 40px;
+    padding-top: 2px;
+}
+
+#signbtn {
+    background-color: #d73948;
+    border: none;
+    border-radius: 5px;
+    width: 30%;
+    height: 30px;
+    color: white;
+    font-family: Yekan;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+#changesign {
+    font-size: 15px;
+    color: rgb(51, 122, 183);
+    cursor: pointer;
+    display: block;
+}

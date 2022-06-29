@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import {
     VALIDATOR_REQUIRE,
     VALIDATOR_MINLENGTH,
@@ -14,57 +14,17 @@ import closed from '../assets/closed.png';
 
 export default function Navbar(){
 
-    useEffect(() => {
-        console.log("isopne is :",isOpen)
-    })
-
     const [isOpen, setIsopen] = useState(false);
     const [login, setlogin] = useState(false)
     const [emaildisplay, setdisplay] = useState("block")
     const [showPass, setShow] = useState("password");
     const [eye, eyestatus] = useState(open);
 
-    const [modalCategory, setstatus] = useState(false);
-
-    function mobile() {
-        return <div>
-            <h3>:گوشی موبایل</h3>
-            <ul id='mobilelist'>
-                <li>گوشی سامسونگ</li>
-                <li>گوشی شیائومی</li>
-                <li>گوشی اپل</li>
-            </ul>
-            <h3>:تبلت</h3>
-            <ul id='mobilelist'>
-                <li>تبلت  سامسونگ</li>
-                <li>تبلت شیائومی</li>
-                <li>تبلت اپل</li>
-            </ul>
-        </div>
-    }
-
-    function laptop() {
-        return <div>
-            <h3>لپتاپ:</h3>
-            <ul id='mobilelist'>
-                <li>لپ‌تاپ سامسونگ</li>
-                <li>لپ‌تاپ شیائومی</li>
-                <li>لپ‌تاپ اپل</li>
-            </ul>
-        </div>
-    }
-
-    function categoryModal(props) {
-        var modalstatus = props.mobile
-        if (modalstatus) {
-            return <mobile />
-        }
-        return <laptop />
-    }
-
 
     function toggleModal() {
         setIsopen(!isOpen);
+        setdisplay("block");
+        setlogin(false);
     }
 
     function toggleShowpass() {
@@ -88,13 +48,11 @@ export default function Navbar(){
                 x.innerHTML = "ورود";
                 y.innerHTML = "حساب کاربری جدید می‌سازم";
                 setdisplay("none")
-                // e.style.display = "none"
             }
             else {
                 x.innerHTML = "ثبت نام";
                 y.innerHTML = "حساب کاربری دارم";
                 setdisplay("block")
-                // e.style.display = "block"
             }
             setlogin(!login);
         }
@@ -109,7 +67,6 @@ export default function Navbar(){
                     <Modal
                         portalClassName="modal"
                         isOpen={isOpen}
-                        //onRequestClose={toggleModal}
                         style={{
                             overlay: {
                                 position: 'fixed',
@@ -128,7 +85,7 @@ export default function Navbar(){
                                 outline: 'none',
                                 padding: '20px',
                                 width: '500px',
-                                height: '500px'
+                                height: '510px'
                             }
                         }}
                     >
@@ -175,18 +132,18 @@ export default function Navbar(){
                         </div>
 
                         <div>
-                            <button id={styles.signbtn} >
+                            <button id='signbtn' >
                                 ثبت نام
                             </button>
-                            <p id={styles.changesign} onClick={signlog} > حساب کاربری دارم </p>
+                            <p id='changesign' onClick={signlog} > حساب کاربری دارم </p>
                         </div>
 
                     </Modal>
                 </div>
                 <div className={styles.links}>
                     <div className={styles.dropdown}>
-                        <button class={styles.dropbtn}> لپ‌تاپ
-                            <i class="fa fa-caret-down"></i>
+                        <button className={styles.dropbtn}> لپ‌تاپ
+                            <i className="fa fa-caret-down"></i>
                         </button>
                         <div className={styles.dropdown_content}>
                             <a href="#">لپتاپ لنوو</a>
@@ -195,8 +152,8 @@ export default function Navbar(){
                         </div>    
                     </div>
                     <div className={styles.dropdown}>
-                        <button class={styles.dropbtn}> موبایل و تبلت
-                            <i class="fa fa-caret-down"></i>
+                        <button className={styles.dropbtn}> موبایل و تبلت
+                            <i className="fa fa-caret-down"></i>
                         </button>
                         <div className={styles.dropdown_content}>
                             <a href="#">گوشی سامسونگ</a>
