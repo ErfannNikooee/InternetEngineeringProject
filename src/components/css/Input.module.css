@@ -1,0 +1,15 @@
+.inputcontainer>input {
+    margin: 5px 0px;
+    height: 30px;
+    padding: 0 10px;
+    font-size: 16px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.inputcontainer {
+    display: flex;
+    flex-direction: column;
+    /* width: 200px; */
+    /* justify-content: center; */
+}

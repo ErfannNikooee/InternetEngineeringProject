@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { validate } from './validators';
+import styles from './css/Input.module.css'
 
 const INPUT_STATES = {
   UNTOUCHED: 'UNTOUCHED',
@@ -50,7 +51,7 @@ const Input = props => {
 
   return (
     <div className={handleFormStatus()} data-testid="form-input">
-      <div className='inputcontainer'>
+      <div className={styles.inputcontainer}>
         <label> {props.label} </label>
         <input type={props.type} id={props.id} onBlur={handleBlur} onChange={handleChange} />
       </div>
