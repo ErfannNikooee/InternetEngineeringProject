@@ -25,43 +25,20 @@ export default function Navbar(){
     const [eye, eyestatus] = useState(open);
 
     const [modalCategory, setstatus] = useState(false);
-
-    function mobile() {
-        return <div>
-            <h3>:گوشی موبایل</h3>
-            <ul id='mobilelist'>
-                <li>گوشی سامسونگ</li>
-                <li>گوشی شیائومی</li>
-                <li>گوشی اپل</li>
-            </ul>
-            <h3>:تبلت</h3>
-            <ul id='mobilelist'>
-                <li>تبلت  سامسونگ</li>
-                <li>تبلت شیائومی</li>
-                <li>تبلت اپل</li>
-            </ul>
-        </div>
-    }
-
-    function laptop() {
-        return <div>
-            <h3>لپتاپ:</h3>
-            <ul id='mobilelist'>
-                <li>لپ‌تاپ سامسونگ</li>
-                <li>لپ‌تاپ شیائومی</li>
-                <li>لپ‌تاپ اپل</li>
-            </ul>
-        </div>
-    }
-
-    function categoryModal(props) {
-        var modalstatus = props.mobile
-        if (modalstatus) {
-            return <mobile />
+    handleAuth = () => {
+        if (login){
+            loginHandler()
+        }else{
+            signupHandler()
         }
-        return <laptop />
     }
 
+    loginHandler = () => {
+        console.log("login handler")
+    }
+    signupHandler = () => {
+        console.log("signup handler")
+    }
 
     function toggleModal() {
         setIsopen(!isOpen);
@@ -175,7 +152,7 @@ export default function Navbar(){
                         </div>
 
                         <div>
-                            <button id={styles.signbtn} >
+                            <button id={styles.signbtn} onChange={() => handleAuth()}>
                                 ثبت نام
                             </button>
                             <p id={styles.changesign} onClick={signlog} > حساب کاربری دارم </p>
