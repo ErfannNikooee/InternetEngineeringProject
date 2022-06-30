@@ -1,0 +1,55 @@
+
+.modalheader>div {
+    text-align: left;
+}
+
+.closebtn {
+    border: none;
+    background-color: transparent;
+    width: 35px;
+    height: 35px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.modalheader>h3 {
+    font-weight: normal;
+    position: relative;
+    margin: 0;
+    bottom: 14px;
+    border-bottom: 1px solid #cccccc;
+    color: #808080;
+}
+
+.modalcontainer {
+    padding: 10px 70px;
+    text-align: right;
+}
+
+.modalcontainer>div>p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+
+
+.visiblity {
+    display: none;
+}
+
+.eye {
+    width: 27px;
+    height: 21px;
+    color: #cdcdcd;
+}
+
+
+.btn {
+    position: relative;
+    bottom: -36px;
+    left: -17px;
+    text-align: right;
+    width: 50px;
+    height: 0px;
+}

@@ -1,17 +1,47 @@
-import React, { useState } from 'react';
-import ReactDOM from 'react-dom/client';
+import React, { useEffect,useState } from 'react';
 import logo from '../assets/torob_logo.svg';
 import magnifier from '../assets/search.svg';
 import Modal from 'react-modal'
 import Navbar from '../components/Navbar';
 import './styles/Home.css';
+import productService from '../services/product.service';
 Modal.setAppElement("#root");
 
-const Home = () => {
+export default function Home () {
+
+    const [categories, setCategories] = useState([])
+
+    const getCategories = () => {
+        return fetch('static/categories.json',{
+            headers : { 
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+             }
+          })
+        .then(res => {
+            return res.json()
+        }).catch(err => {
+            console.log(err)
+        })
+    }
+
+    useEffect(() => {
+        console.log("run")
+        getCategories().then(res => {
+            console.log(res[0])
+            setCategories(res[0].sub_dirs)
+        })
+    },[])
+    
+    // useEffect(() => {
+    //     productService.GetCategories().then(res => {
+    //         console.log(res)
+    //     })
+    // },[])
 
     return (
         <div className='Homepage'>
-            <Navbar/>
+            <Navbar links={categories}/>
             <div className='container'>
                 <div className='title'>
                     <div className='name'>
@@ -40,4 +70,3 @@ const Home = () => {
     )
 }
 
-export default Home;

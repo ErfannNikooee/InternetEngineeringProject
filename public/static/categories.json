@@ -1,0 +1,83 @@
+[
+    {
+        "name":"products",
+        "description":"",
+        "sub_dirs":[
+            {
+                "name":"mobile&tablet",
+                "description":"موبایل و تبلت",
+                "sub_dirs":[
+                    {
+                        "name":"mobile",
+                        "description":"موبایل",
+                        "sub_dirs":[
+                            {
+                                "name":"samsung_mobile",
+                                "description":"گوشی سامسونگ",
+                                "sub_dirs":[]
+                            },
+                            {
+                                "name":"xiaomi_mobile",
+                                "description":"گوشی شیائومی",
+                                "sub_dirs":[]
+                            },
+                            {
+                                "name":"'apple_mobile",
+                                "description":"گوشی اپل",
+                                "sub_dirs":[]
+                            }
+                        ]
+                    },
+                    {
+                        "name":"tablet",
+                        "description":"تبلت",
+                        "sub_dirs":[
+                            {
+                                "name":"apple_tablet",
+                                "description":"تبلت اپل",
+                                "sub_dirs":[]
+                            },
+                            {
+                                "name":"samsung_tablet",
+                                "description":"تبلت سامسونگ",
+                                "sub_dirs":[]
+                            },
+                            {
+                                "name":"xiaomi_tablet",
+                                "description":"تبلت شیائومی",
+                                "sub_dirs":[]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name":"laptop",
+                "description":"لپتاپ",
+                "sub_dirs":[
+                    {
+                        "name":"laptop",
+                        "description":"لپتاپ",
+                        "sub_dirs":[
+                            {
+                                "name":"lenovo_laptop",
+                                "description":"لپتاپ لنوو",
+                                "sub_dirs":[]
+                            },
+                            {
+                                "name":"asus_laptop",
+                                "description":"لپتاپ ایسوس",
+                                "sub_dirs":[]
+                            },
+                            {
+                                "name":"apple_laptop",
+                                "description":"لپتاپ اپل",
+                                "sub_dirs":[]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

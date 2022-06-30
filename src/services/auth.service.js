@@ -1,18 +1,22 @@
 
 import axios from "axios"
-const API_URL = "localhost:8080/"
+const API_URL = "http://localhost:8080/"
 
 class AuthService{
     async login(username,password) {
+        console.log("before req")
         return axios.post(API_URL+ "login", {
-            username,password
-        }).then(res => res.json())
-        .then(data => {
-            if (data.token){   
-                localStorage.setItem("token",JSON.stringify(data.token))
+            username:username,
+            password:password
+        }).then(res => {
+            if (res.data.token){   
+                console.log("received")
+                localStorage.setItem("token",JSON.stringify(res.data.token))
+                return res.data
             }
         }).catch(err => {
             console.log(err)
+            throw err
         })
     }
 
@@ -27,10 +31,9 @@ class AuthService{
             password: password,
             role : 1
             //fullname
-        }).then(res => res.json)
-        .then(data => {
-            if (data.token){
-                localStorage.setItem("token",JSON.stringify(data.token))
+        }).then(res => {
+            if (res.token){
+                localStorage.setItem("token",JSON.stringify(res.token))
             }
         }).catch(err => {
             console.log(err)
