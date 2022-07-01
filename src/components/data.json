@@ -1,0 +1,112 @@
+{
+  "data": [
+    {
+     "id":0 ,
+     "category":"notebook" ,
+     "battery_capacity":1490,
+     "detail":"this is notebook number111" ,
+     "img":"https://images-americanas.b2w.io/produtos/01/00/item/132381/3/132381386G1.png" ,
+     "resolution":"10 x 1400, 00" ,
+     "name":"Notebook Lenovo Ideapad 320 Intel® Core i5-7200u 8GB" 
+    },
+    {
+     "id":1 ,
+     "category":"notebook" ,
+     "battery_capacity":2300 ,
+     "detail":"this is notebook number2" ,
+     "img": "https://images-americanas.b2w.io/produtos/01/00/item/132381/3/132381386G1.png",
+     "resolution":"13 x 1300, 00" ,
+     "name":"Notebook Lenovo Ideapad 350 Intel® Core i5-7200u 8GB" 
+    },
+    {
+     "id":2 ,
+     "category":"notebook" ,
+     "battery_capacity":2100 ,
+     "detail":"this is notebook number3" ,
+     "img":"https://images-submarino.b2w.io/produtos/01/00/sku/34470/9/34470934G1.jpg" ,
+     "resolution":"10 x 1200, 00" ,
+     "name":"Notebook Dell Alienware - i7 16GB" 
+    },
+    {
+     "id":3 ,
+     "category":"notebook" ,
+     "battery_capacity":2000 ,
+     "detail":"this is notebook number111" ,
+     "img":"https://images-submarino.b2w.io/produtos/01/00/sku/34470/9/34470934G1.jpg" ,
+     "resolution":"10 x 1400, 00" ,
+     "name":"Notebook Dell Alienware - i7 12GB" 
+    },
+    {
+     "id":4 ,
+     "category":"notebook" ,
+     "battery_capacity":1900 ,
+     "detail":"this is notebook number111" ,
+     "img": "https://images-submarino.b2w.io/produtos/01/00/sku/34470/9/34470934G1.jpg",
+     "resolution":"10 x 1100, 00" ,
+     "name":"Notebook Dell Alienware - i7 8GB" 
+    },
+    {
+     "id":5 ,
+     "category":"notebook" ,
+     "battery_capacity":1777 ,
+     "detail":"this is notebook number111" ,
+     "img": "https://images-americanas.b2w.io/produtos/01/00/item/132260/6/132260681G1.jpg",
+     "resolution":"10 x 1400, 00" ,
+     "name":"Notebook Samsung Expert X22 Intel Core 7 i5 8GB" 
+    },
+    {
+     "id":6 ,
+     "category":"smartphone" ,
+     "battery_capacity":1000 ,
+     "detail": "this is mobile number1",
+     "img": "https://images-americanas.b2w.io/produtos/01/00/item/132651/7/132651745G1.jpg",
+     "resolution":"11 x 395, 00" ,
+     "name":"iPhone 8 Dourado 64GB Tela 4.7" 
+    },
+    {
+     "id":7 ,
+     "category":"smartphone" ,
+     "battery_capacity":900 ,
+     "detail":"this is mobile number1" ,
+     "img": "https://images-americanas.b2w.io/produtos/01/00/item/132474/0/132474081G1.png",
+     "resolution":"10 x 395, 00" ,
+     "name":"Smartphone Motorola Moto G5s Plus" 
+    },
+    {
+     "id":8 ,
+     "category":"smartphone" ,
+     "battery_capacity":800 ,
+     "detail":"this is mobile number8" ,
+     "img": "https://images-americanas.b2w.io/produtos/01/00/item/133453/1/133453185G1.jpg",
+     "resolution":"12 x 395, 00" ,
+     "name":"Smartphone Motorola Moto G4 Plus" 
+    },
+    {
+     "id":9 ,
+     "category":"smartphone" ,
+     "battery_capacity":750 ,
+     "detail":"this is mobile number1" ,
+     "img": "https://images-americanas.b2w.io/produtos/01/00/item/133453/1/133453185G1.jpg",
+     "resolution":"10 x 395, 00" ,
+     "name": "Smartphone Motorola Moto G5 Plus" 
+    },
+    {
+     "id":10 ,
+     "category":"smartphone" ,
+     "battery_capacity":500 ,
+     "detail":"this is mobile number1" ,
+     "img": "https://images-submarino.b2w.io/produtos/01/00/item/133666/1/133666164G1.jpg",
+     "resolution":"10 x 345, 00" ,
+     "name": "Smartphone Motorola Moto G6 Plus" 
+    },
+    {
+     "id":11 ,
+     "category":"smartphone" ,
+     "battery_capacity":444 ,
+     "detail":"this is mobile number1" ,
+     "img": "https://images-americanas.b2w.io/produtos/01/00/item/132474/0/132474081G1.png",
+     "resolution":"10 x 395, 00" ,
+     "name": "Smartphone Motorola Moto Z3 Play"
+    }
+  ]
+}
