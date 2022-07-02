@@ -12,7 +12,7 @@ import userService from "../services/user.service";
 
 export default function ProductsPage() {
     const { category } = useParams()
-    const [products, setProducts] = useState([])
+    // const [products, setProducts] = useState([])
 
 
     //const data = require('../components/data.json').data
@@ -20,19 +20,21 @@ export default function ProductsPage() {
 
     const user = useAuth()
 
-    useEffect(() => {
-        productService.getProductByType(category).then(res => {
-            if(res.data){
-                setProducts(res.data)
-            }else{
-                setProducts([])
-            }
-        }).catch(err => {
-            console.log("error fetching data")
-        })
-    },[category])
+    // useEffect(() => {
+    //     productService.getProductByType(category).then(res => {
+    //         if(res.data){
+    //             setProducts(res.data)
+    //         }else{
+    //             setProducts([])
+    //         }
+    //     }).catch(err => {
+    //         console.log("error fetching data")
+    //     })
+    // },[category])
 
+    const products = require('../components/data/laptops.json')
 
+    console.log(products);
     return (
 
         <div className="ProductsPage">

@@ -1,0 +1,35 @@
+[
+    {
+        "category": "lenovo_laptop",
+        "cpu": "ryzen 7",
+        "id": "62b75400b910553b28135235",
+        "image_url": "https://turborayan.com/img/p/9/2/6/3/7/92637.jpg?time=1637646361895",
+        "min_price": "30000000" ,
+        "name": "lenovo ideapad 5 pro",
+        "ram": "16",
+        "screen_size": "16",
+        "weight": "1900"
+    },
+    {
+        "category": "lenovo_laptop",
+        "cpu": "core-i5",
+        "id": "62bd61e234957db1913ca23c",
+        "image_url": "https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8OTc1NDF8aW1hZ2UvcG5nfGgzMS9oMmMvMTE2NDIwMDkyODg3MzQucG5nfDM4YjZjZjZmNjhiYWM4OWY1ZTJmYzMwMTlkYTVjYzNiYWEyMWIxYWM2ZTYyZWM0ZjJhNWUwYzE3MDhmYTk4MTU/lenovo-laptop-think-thinkpad-x1-extreme-gen4-gallery-5.png",
+        "min_price": "5000",
+        "name": "lenovo thinkpad 4",
+        "ram": "8",
+        "screen_size": "15.6",
+        "weight": "2100"
+    },
+    {
+        "category": "asus_laptop",
+        "cpu": "core-i9",
+        "id": "62bd627a34957db1913ca23d",
+        "image_url": "https://m.media-amazon.com/images/I/71zNU5UBINL._AC_SL1500_.jpg",
+        "min_price": "20000",
+        "name": "asus rog zephyrus",
+        "ram": "32",
+        "screen_size": "16",
+        "weight": "2150"
+    }
+]

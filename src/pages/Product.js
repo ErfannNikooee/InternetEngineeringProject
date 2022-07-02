@@ -6,6 +6,7 @@ import "./styles/Product.css"
 export default function Product(props){
     // console.log(props.product);
     const {product,addHandler} = props;
+    // console.log(Number(product.min_price));
 
     return (
         <div className="card">
@@ -19,7 +20,7 @@ export default function Product(props){
                 <div className="info">
                     {/* <p>R$ {battery_capacity}</p>
                     <p>{resolution}</p> */}
-                    <p>from {product.min_price}</p>
+                    <p>از {Number(product.min_price).toLocaleString('ar-EG')} تومان</p>
                 </div>
                 <button className="addtofav" onClick={() => addHandler(product)}>
                     <div>
