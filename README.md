@@ -1,3 +1,38 @@
+# پروژه درس مهندسی اینترنت
+در این پروژه، باید یک نمونه ی ساده از سایت ترب را از هر دو سمت فرانت اند و بک اند پیاده سازی میکردیم.\
+از تکنولوژی های React.js ر سمت فرانت و  Go در سمت بک استفاده شده است\
+فایل صورت پروژه در کنار فایل Readme است.
+
+### ساخته شده با:
+* [HTML](https://html.com/)
+* [Javascript](https://www.javascript.com/)
+* [Reactjs](https://reactjs.org/)
+* [Go](https://go.dev/)
+* [MongoDB](https://www.mongodb.com/)
+
+## بخش های پروژه
+- صفحه ی اصلی
+- صفحه ی نتایج جستجو
+- صفحه ی کالا
+- صفحه ی پروفایل کاربر
+
+## صفحه‌ی اصلی
+
+![Screenshot (1)](https://user-images.githubusercontent.com/95939538/176985727-ebc34503-b7f7-47d4-b82f-b381b360407d.png)
+در این صفحه کاربر میتواند وارد بخش ثبت نام یا ورود بشود و به حساب خود وارد شود یا حساب جدید بسازد.\
+همچنین کاربر میتواند کالا مورد نظرش را جستجو کند یا از منو های بالای صفحه، دسته ای از کالا ها را انتخاب کند.
+
+![Screenshot (2)](https://user-images.githubusercontent.com/95939538/176985926-a667e30b-0cb9-47a3-88be-2af94c0ec66e.png)
+این یک Modal است که بعد از کلیک بر روی دکمه‌ی ثبت نام ظاهر میشود.\
+کاربر میتواند با کلیک بر روی لینک زیر پایین Modal بین حالت های ثبت نام و ورود جا به جا شود.
+
+## صفحه ی نتایج جستجو
+
+## صفحه ی کالا
+
+## صفحه ی پروفایل کاربر
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
