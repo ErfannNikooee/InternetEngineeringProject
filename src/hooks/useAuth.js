@@ -8,12 +8,12 @@ export default function useAuth(){
     const dispatch = useDispatch()
     
     useEffect(() =>{
-        console.log("calling validate token")
+       // console.log("calling validate token")
         authService.validateToken().then(u => {
-            console.log("validate token response: ",u)
+            // console.log("validate token response: ",u)
             dispatch(setUser(u))
         }).catch(err => {
-            console.log("user not logged in: ",err)
+            //console.log("user not logged in: ",err)
             dispatch(clearUser())
         })
     },[])

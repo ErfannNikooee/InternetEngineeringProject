@@ -1,0 +1,75 @@
+.container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: flex-start;
+    width:100%;
+}
+.storeInfo{
+    display:flex;
+    align-self:flex-end;
+    flex-direction:column;
+    align-items:flex-end;
+    justify-content: flex-start;
+    margin:2rem;
+}
+.storeName{
+    font-size:1.4rem;
+    font-weight:700;
+    margin-bottom: 0;
+}
+.storeCity{
+    font-size:1rem;
+    font-weight:300;
+    color:gray;
+    margin:0;
+}
+
+.products{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    width:90%;
+    margin-right:2rem;
+    background-color:rgb(254, 53, 53);
+    border-radius:15px;
+    padding:1rem;
+}
+.products > h3{
+    font-size:1.4rem;
+    font-weight:700;
+    margin-bottom: 1rem;
+    color:rgb(223, 255, 255);
+}
+.products_list{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:flex-end;
+    margin-right: 2rem;
+}
+.product_card{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color:white;
+    border-radius:10px;
+    padding:1rem;
+    margin:1rem;
+    height:100%;
+}
+.image_container{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: fit-content;
+}
+
+.image_container > img{
+    width: 200px;
+    padding: 5px;
+}
+.product_name > h4{
+    margin:0;
+}

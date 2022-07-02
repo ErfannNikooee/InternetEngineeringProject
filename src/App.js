@@ -3,6 +3,7 @@ import Home from "./pages/Home"
 import ProductDetails from './pages/ProductDetails';
 import ProductsPage from './pages/ProductsPage';
 import ProfilePage from './pages/ProfilePage';
+import StorePage from './pages/StorePage';
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
         <Route path='/browse/:category' element={<ProductsPage/>} />
         <Route path='/products/:productId' element={<ProductDetails/>} />
         <Route path='/profile' element={<ProfilePage/>} />
-        {/* <Route path='/stores/:storeId' element={<StorePage/>} /> */}
+        <Route path='/stores/:storeId' element={<StorePage/>} />
       </Routes>
     </BrowserRouter>
   );

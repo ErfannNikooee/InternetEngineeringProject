@@ -30,7 +30,14 @@ class SupplierService{
         })
     }
 
-
+    async GetStoreInfo(storeId){
+        return axios.get(API_URL + "stores/" + storeId , {headers : authHeader()})
+            .then(res => {
+                if (res.data){
+                    return res.data
+                }
+            })
+    }
 }
 
 export default new SupplierService();
