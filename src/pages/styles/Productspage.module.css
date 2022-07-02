@@ -61,6 +61,10 @@
     padding-right: 20px;
 }
 
+/* .subcat>p{
+    color:inherit;
+} */
+
 .prices {
     border-bottom: 1px solid #cccccc;
     padding:20px 30px;

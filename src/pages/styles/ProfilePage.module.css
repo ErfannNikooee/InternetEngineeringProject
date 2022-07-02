@@ -1,0 +1,135 @@
+.profile_page{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    text-align:right;
+    padding:1rem;
+    margin:1rem 0;
+    background-color: rgb(190, 190, 190);
+}
+.list_header{
+    font-size:1.3rem;
+    font-family:Yekan;
+    color:black;
+    margin:0.5rem;
+    align-self: flex-end;
+}
+
+.user_details{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-evenly;
+    width:90%;
+    margin:1rem;
+    border-radius:10px;
+    background-color:white;
+    color:black;
+    font-family:Yekan;
+    font-size:1.3rem;
+    padding:1rem;
+    direction:rtl;
+    padding:0.5rem;
+}
+
+.list_container{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content: flex-end;
+    background-color:white;
+    width:100%;
+    border-radius:10px;
+    margin-bottom:1rem;
+}
+
+.stores_container{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    justify-content:flex-start;
+    text-align:right;
+    padding:1rem;
+    margin:0;
+    background-color: rgb(190, 190, 190);
+}
+
+.store_title{
+    font-size:1.3rem;
+    font-family:Yekan;
+    color:black;
+    margin:0.5rem;
+    align-self: flex-end;
+}
+.store_list_container{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:flex-start;
+    width:100%;
+    border-radius:10px;
+    margin-bottom:1rem;
+}
+.store{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    align-items:center;
+    width:90%;
+    background-color:white;
+    color:black;
+    font-family:Yekan;
+    font-size:1.3rem;
+    padding:1rem;
+    direction:rtl;
+    padding:0.5rem;
+    border-radius:10px;
+}
+
+.field > a{
+    color:inherit;
+}
+
+.field{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+}
+.field > p{
+    font-size:1rem;
+    font-family:Yekan;
+    color:gray;
+}
+.field > span{
+    font-size:1.2rem;
+    font-family:Yekan;
+    color:black;
+}
+.field > span > a{
+    color:inherit;
+}
+.field > *{
+    margin:0.5rem;
+}
+
+.addBtn{
+    background-color:tomato;
+    border-radius:10px;
+    border:0px;
+    color:white;
+    padding:0 1rem;
+    margin:0.3rem;
+}
+.addBtn:hover{
+    background-color:rgb(255, 79, 47);
+    cursor:pointer;
+}
+.addBtn > p{
+    font-size:1rem;
+    font-family:Yekan;
+    font-weight: 400;
+    color:black;
+    margin:0.2rem;
+}

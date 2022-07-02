@@ -5,22 +5,23 @@ import "./styles/Product.css"
 
 export default function Product(props){
     // console.log(props.product);
-    const {id, battery_capacity, img, resolution, name} = props.product;
+    const {product,addHandler} = props;
 
     return (
         <div className="card">
             <div className="image-container">
-                <img src={img} alt={name}/>
+                <img src={product.image_url} alt={product.name}/>
             </div>
             <div className="card-body">
-                <Link to={'/products/'+id} >
-                    <h2>{name}</h2>
+                <Link to={'/products/'+product.id} >
+                    <h2>{product.name}</h2>
                 </Link>
                 <div className="info">
-                    <p>R$ {battery_capacity}</p>
-                    <p>{resolution}</p>
+                    {/* <p>R$ {battery_capacity}</p>
+                    <p>{resolution}</p> */}
+                    <p>from {product.min_price}</p>
                 </div>
-                <button className="addtofav">
+                <button className="addtofav" onClick={() => addHandler(product)}>
                     <div>
                         <h3>افزودن به لیست محبوب ها</h3>
                         {/* <img src={cartimage} alt='cartimage'/> */}

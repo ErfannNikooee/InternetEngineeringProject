@@ -4,12 +4,27 @@ import magnifier from '../assets/search.svg';
 import Modal from 'react-modal'
 import Navbar from '../components/Navbar';
 import './styles/Home.css';
+import {useSelector,useDispatch} from "react-redux";
+import { setUser,clearUser } from "../features/user/userSlice";
+import authService from "../services/auth.service";
+
 import productService from '../services/product.service';
 Modal.setAppElement("#root");
 
 export default function Home () {
 
     const [categories, setCategories] = useState([])
+    const dispatch = useDispatch()
+    useEffect(() =>{
+        console.log("calling validate token")
+        authService.validateToken().then(u => {
+            console.log("validate token response: ",u)
+            dispatch(setUser(u))
+        }).catch(err => {
+            console.log("user not logged in: ",err)
+            dispatch(clearUser())
+        })
+    },[])
 
     const getCategories = () => {
         return fetch('static/categories.json',{

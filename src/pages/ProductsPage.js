@@ -1,36 +1,37 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import productService from "../services/product.service";
 import Navbar from '../components/Navbar';
 import styles from './styles/Productspage.module.css'
 import Product from "./Product";
-
+import authService from "../services/auth.service";
+import {useSelector,useDispatch} from "react-redux";
+import { setUser,clearUser } from "../features/user/userSlice";
+import useAuth from "../hooks/useAuth";
+import userService from "../services/user.service";
 
 export default function ProductsPage() {
     const { category } = useParams()
     const [products, setProducts] = useState([])
 
-    ///////////
-    const data = require('../components/data.json').data
-    const categories = require('../components/categories.json')[0].sub_dirs
-    console.log(categories);
-    ///////////////////////////
-    // useEffect(() => {
-    //     productService.getProductByType(category).then(res => {
-    //         if(res.data){
-    //             console.log(res.data)
-    //             setProducts(res.data)
-    //         }else{
-    //             console.log("no res.data")
-    //         }
-    //     }).catch(err => {
-    //         console.log("error fetching data")
-    //     })
-    // },[category])
 
-    // useEffect(() =>{
-    //     console.log("products: ",products)
-    // })
+    //const data = require('../components/data.json').data
+    const categories = require('../components/categories.json')[0].sub_dirs
+
+    const user = useAuth()
+
+    useEffect(() => {
+        productService.getProductByType(category).then(res => {
+            if(res.data){
+                setProducts(res.data)
+            }else{
+                setProducts([])
+            }
+        }).catch(err => {
+            console.log("error fetching data")
+        })
+    },[category])
+
 
     return (
 
@@ -40,10 +41,11 @@ export default function ProductsPage() {
                 <div className={styles.left_container}>
                     <h2 className={styles.results}>نتایج جستجو</h2>
                     <div className={styles.products}>
-                        {data.map(product => (
+                        {products.map(product => (
                             <Product
                                 key={product.id}
                                 product={product}
+                                addHandler={(p) => userService.addToFavorites(p)}
                             />
                         ))}
                     </div>
@@ -54,13 +56,21 @@ export default function ProductsPage() {
 
                     <div className={styles.subcat}>
                         <h2> دسته ها</h2>
-                        {categories.map(obj => (
+                        {categories.map(link => (
                             <div>
-                                <p>{obj.description}</p>
+                                <Link to={"/browse/" + link.name}
+                                style={{ textDecoration: 'none',color:'inherit' }}    
+                                >
+                                    <p>{link.description}</p>
+                                </Link>
                                 <ul className={styles.link_lists}>
-                                    {obj.sub_dirs.map(subsublink => (
+                                    {link.sub_dirs.map(subsublink => (
                                         <li>
-                                            {subsublink.description}
+                                            <Link to={"/browse/" + subsublink.name}
+                                            style={{ textDecoration: 'none',color:'inherit' }}
+                                            >
+                                                {subsublink.description}
+                                            </Link>
                                         </li>
                                     ))}
                                 </ul>
