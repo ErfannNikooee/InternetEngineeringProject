@@ -20,12 +20,12 @@ export default function Navbar({ links }) {
     const userSlice = useSelector(state => state.user);
 
     const handleLogout = () => {
-        //clear fav
         authService.logout()
         dispatch(clearUser())
         navigate("/")
     }
 
+    
     let renderAuthBtn = () => {
         if (userSlice.authState === USER_STATE.LOGGED_IN) {
             return (

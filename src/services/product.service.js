@@ -4,6 +4,11 @@ const API_URL = "http://localhost:8080/"
 class ProductService{
     async getProduct(productId){
         return axios.get(API_URL+ "products/" + productId, {headers: authHeader()})
+            .then(res => {
+                if (res.data){
+                    return res.data
+                }
+            })
     }
 
     async getProductByType(category){
@@ -13,6 +18,11 @@ class ProductService{
     
     async GetProductOffers(productId){
         return axios.get(API_URL + "offers/" + productId, {headers: authHeader()})
+            .then(res => {
+                if (res.data){
+                    return res.data
+                }
+            })
     }
 
     async GetCategories(){

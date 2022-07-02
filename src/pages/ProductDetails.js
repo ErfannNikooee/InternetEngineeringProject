@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import productService from "../services/product.service";
 import Navbar from '../components/Navbar';
 import styles from './styles/ProductDetails.module.css';
+import useAuth from "../hooks/useAuth";
 
 export default function ProductDetails() {
 
@@ -10,30 +11,37 @@ export default function ProductDetails() {
     const { productId } = useParams()
     const categories = require('../components/categories.json')[0].sub_dirs
     /////////////////////////
-    // const [product,setProduct] = useState()
-    // const [offers, setOffers] = useState([])
+    const [product,setProduct] = useState({})
+    const [offers, setOffers] = useState([])
 
-    // useEffect(() => {
-    //     productService.getProduct(productId).then(res => {
-    //         if (res.data){
-    //             setProduct(res.data)
-    //         }
-    //     }).catch(err => {
-    //         console.log(err)
-    //     })
-    // },[])
-    // useEffect(() => {
-    //     productService.GetProductOffers(productId).then(res => {
-    //         if (res.data){
-    //             setOffers(res.data)
-    //         }
-    //     }).catch(err => {
-    //         console.log(err)
-    //     })
-    // },[product])
+    const user = useAuth()
 
-    const data = require('../components/data.json').data[productId]
-    console.log(data);
+    useEffect(() => {
+        console.log("called useeffect")
+        productService.getProduct(productId).then(data => {
+            console.log("products -> ",data)
+            setProduct(data)
+        }).catch(err => {
+            console.log(err)
+        })
+    },[])
+
+    useEffect(() => {
+        productService.GetProductOffers(productId).then(data => {
+            console.log("offers ->> ",offers)
+            setOffers(data)
+        }).catch(err => {
+            console.log(err)
+        })
+    },[product])
+
+    //const data = require('../components/data.json').data[productId]
+   // console.log(data);
+
+    let fields = (p) => {
+        let {id,category,image_url,min_price,name,...fields} = p
+        return fields
+    }
 
     return (
         <div>
@@ -42,14 +50,14 @@ export default function ProductDetails() {
                 <div className={styles.product_container}>
                     <div className={styles.product} >
                         <div className={styles.productimg}>
-                            <img src={data.img} alt="product-image" />
+                            <img src={product.image_url} alt="product-image" />
                         </div>
                         <div className={styles.info}>
                             <div className={styles.name}>
-                                <h1> {data.name}</h1>
+                                <h1> {product.name}</h1>
                             </div>
                             <div className={styles.price_range}>
-                                <h2> از 5000 تومان تا 10,000 تومان</h2>
+                                <h2>از {product.min_price} تومان</h2>
                             </div>
                         </div>
 
@@ -67,33 +75,46 @@ export default function ProductDetails() {
                 <div className={styles.bottem_container}>
 
                     <div className={styles.details}>
-                        <h1>مشخصات {data.name}</h1>
+                        <h1>مشخصات {product.name}</h1>
                         <div>
                             <h2 className={styles.detailsheader}>مشخصات کلی</h2>
-                            <h2>{data.detail}</h2>
+                            {Object.keys(fields(product)).map(key => (
+                                 <div className={styles.field} key={key}>
+                                    <div className={styles.field_title}>
+                                        {key}
+                                    </div>
+                                    <div className={styles.field_value}>
+                                        {fields(product)[key]}
+                                    </div>
+                                 </div>
+                            ))}
+                            {/* <h2>{data.detail}</h2>
                             <h2>{data.battery_capacity}</h2>
-                            <h2>{data.resolution}</h2>
+                            <h2>{data.resolution}</h2> */}
                         </div>
                     </div>
                     <div className={styles.offers_container}>
                         <h1>فروشگاه های اینترنتی</h1>
                         <div className={styles.offerlist}>
-                            {/* map here */}
-                            <div className={styles.offer_card}>
-                                <div className={styles.store}>
-                                    <h2>تکنولایف</h2>
-                                    <p>تهران</p>
-                                </div>
-                                <div className={styles.store_info}>
-                                    <h2>توضیحات</h2>
-                                    <div>لینک</div>
-                                </div>
-                                <div className={styles.purchase}>
-                                    <div className={styles.price}>5000 تومان</div>
-                                    <button className={styles.buy}>خرید</button>
-                                    <button className={styles.report}>گزارش</button>
-                                </div>
+                            {offers.map(offer => (
+                                <div className={styles.offer_card}>
+                                    <div className={styles.store}>
+                                        <div className={styles.prod_desc}>
+                                            <h2>{offer.prodDesc}</h2>
+                                        </div>
+                                        <h2>{offer.storeName}</h2>
+                                        <p>{offer.storeCity}</p>
+                                    </div>
+                                    
+                                    <div className={styles.purchase}>
+                                        <div className={styles.price}>{offer.price} تومان</div>
+                                            <button className={styles.buy}>
+                                                <a href={offer.url}>خرید</a>
+                                            </button>
+                                        <button className={styles.report}>گزارش</button>
+                                    </div>
                             </div>
+                            ))}
                             
 
                             {/* {offers.map(o => (

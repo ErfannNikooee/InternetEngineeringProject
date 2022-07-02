@@ -23,6 +23,7 @@ export default function ProductsPage() {
     useEffect(() => {
         productService.getProductByType(category).then(res => {
             if(res.data){
+                console.log(res.data)
                 setProducts(res.data)
             }else{
                 setProducts([])
