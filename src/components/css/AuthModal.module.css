@@ -23,7 +23,7 @@
 }
 
 .modalcontainer {
-    padding: 10px 70px;
+    padding: 0 70px;
     text-align: right;
 }
 
@@ -52,4 +52,10 @@
     text-align: right;
     width: 50px;
     height: 0px;
+}
+
+.errorMsg{
+    color:red;
+    font-weight:500;
+    margin-bottom: 5px;
 }

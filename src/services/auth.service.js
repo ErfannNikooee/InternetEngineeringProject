@@ -15,11 +15,8 @@ class AuthService{
             if (res.data.token){   
                 console.log("received")
                 localStorage.setItem("token",JSON.stringify(res.data.token))
-                return res.data
+                return res
             }
-        }).catch(err => {
-            console.log(err)
-            throw err
         })
     }
 
@@ -46,11 +43,11 @@ class AuthService{
             role : 1
             //fullname
         }).then(res => {
-            if (res.token){
-                localStorage.setItem("token",JSON.stringify(res.token))
+            if (res.data){
+                console.log(res.data)
+                localStorage.setItem("token",JSON.stringify(res.data.token))
+                return res
             }
-        }).catch(err => {
-            console.log(err)
         })
     }
 }

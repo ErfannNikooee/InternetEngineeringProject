@@ -18,42 +18,58 @@ export default function AuthModal({isOpen,closeModal}){
     const [eye, eyestatus] = useState(open);
     const [isLogin,setIsLogin] = useState(true)
     const [showPass, setShow] = useState("password");
+    let [username,setUsername] = useState("")
+    let [password,setPassword] = useState("")
+    let [email,setEmail] = useState("")
+
+    let [errorMsg,setErrorMsg] = useState(null)
 
     let navigate = useNavigate()
 
     useEffect(() => {
-        console.log(isOpen)
-    },[isOpen])
+        setErrorMsg(null)
+    },[isLogin])
 
     const handleAuth = () => {
+        // console.log("before resetting")
+        // setErrorMsg(null)
+        // console.log("after resetting")
         if (isLogin){
             loginHandler().then(res => {
-                console.log("navigating")
+                console.log(res)
                 navigate(0)
+            }).catch(err => {
+                setErrorMsg("مجدد تلاش کنید")
             })
         }else{
-            signupHandler()
+            signupHandler().then(res => {
+                //navigate(0)
+                console.log(res)
+            }).catch(err => {
+                setErrorMsg("مجدد تلاش کنید")
+            })
         }
-       
     }
 
     function loginHandler () {
         let username = document.getElementById("username").value;
         let password = document.getElementById("password").value;
         return AuthService.login(username,password).then(res => {
-            console.log("login success")
+            console.log("login success", res)
         }).catch(err => {
-            console.log("login failed")
+            console.log(err.response)
+            throw err
         })
     }
-    const signupHandler = () => {
+    function signupHandler(){
         let email = document.getElementById("email").value;
         let username = document.getElementById("username").value;
         let password = document.getElementById("password").value;
-        AuthService.register(email,username,password).then(res => {
-            console.log("register ok")
+        return AuthService.register(email,username,password).then(res => {
+            console.log("register ok , ",res)
         }).catch(err => {
             console.log("register failed")
+            throw err
         })
     }
 
@@ -120,7 +136,11 @@ export default function AuthModal({isOpen,closeModal}){
                     type={showPass}
                     label="رمز ورود"
                     id="password"
-                    validators={[VALIDATOR_MINLENGTH(8), VALIDATOR_PASSWORD()]}
+                    validators={
+                        isLogin ? []
+                                 : [VALIDATOR_MINLENGTH(8), VALIDATOR_PASSWORD()]
+                        
+                    }
                     errorText="رمز باید حداقل دارای 8 حرف و شامل یک حرف بزرگ یک حرف کوچک و یک عدد باشد "
                 />
                 <input className={styles.visiblity} type="checkbox" id="chk" onClick={toggleShowpass} />
@@ -135,7 +155,7 @@ export default function AuthModal({isOpen,closeModal}){
                 </div>
 
             </div>
-
+            {errorMsg && <div className={styles.errorMsg}>{errorMsg}</div>}
             <div>
                 <button id='signbtn' onClick={handleAuth} >
                     {isLogin ? "ورود" : "ثبت نام"}

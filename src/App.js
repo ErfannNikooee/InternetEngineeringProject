@@ -13,6 +13,7 @@ function App() {
         <Route path='/browse/:category' element={<ProductsPage/>} />
         <Route path='/products/:productId' element={<ProductDetails/>} />
         <Route path='/profile' element={<ProfilePage/>} />
+        {/* <Route path='/stores/:storeId' element={<StorePage/>} /> */}
       </Routes>
     </BrowserRouter>
   );
