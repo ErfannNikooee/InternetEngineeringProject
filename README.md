@@ -1,3 +1,53 @@
+
+# Internet Engineering Project
+In this project, we had to implement a Front-end and Back-end of a simple website like https://www.torob.com \
+React was used for Front and Go was used for Back.
+
+در این پروژه، باید یک نمونه ی ساده از سایت ترب را از هر دو سمت فرانت اند و بک اند پیاده سازی می کردیم.\
+از تکنولوژی های React.js در فرانت و  Go در سمت بک استفاده شده است.\
+فایل صورت پروژه در کنار فایل Readme است.
+
+### Build with:
+* [HTML](https://html.com/)
+* [Javascript](https://www.javascript.com/)
+* [Reactjs](https://reactjs.org/)
+* [Go](https://go.dev/)
+* [MongoDB](https://www.mongodb.com/)
+
+## Project parts
+- Home page  
+- Search results page 
+- Product page
+- User's profile page
+- Store's profile page
+
+##  Home page  
+
+![Screenshot (1)](https://user-images.githubusercontent.com/95939538/176985727-ebc34503-b7f7-47d4-b82f-b381b360407d.png)
+In this page, User can enter the registration or login section and sign up a new account or login to his/her account.\
+Also, User can search for the desired product or select a category of products from the menus on the navbar of the page.
+
+در این صفحه، کاربر میتواند وارد بخش ثبت نام یا ورود بشود و به حساب خود وارد شود یا حساب جدید بسازد.\
+همچنین کاربر میتواند کالا مورد نظرش را جستجو کند یا از منو های بالای صفحه، دسته ای از کالا ها را انتخاب کند.
+
+ \
+  \
+![Screenshot (2)](https://user-images.githubusercontent.com/95939538/176985926-a667e30b-0cb9-47a3-88be-2af94c0ec66e.png)
+This is Modal which appears after clicking on Sign up button in navbar.\
+User can switch between sign-up and login modes by clicking on thw link under the sign up button.
+
+این یک Modal است که بعد از کلیک بر روی دکمه‌ی ثبت نام در نوبار ظاهر میشود.\
+کاربر میتواند با کلیک بر روی لینک زیر دکمه‌ی ثبت نام بین حالت های ثبت نام و ورود جا به جا شود.
+
+## Search results page 
+
+## Product page
+
+## User's profile page
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

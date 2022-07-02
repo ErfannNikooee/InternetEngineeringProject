@@ -1,0 +1,150 @@
+.detailspage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product_container {
+    width: 65%;
+    background-color: white;
+    text-align: center;
+    margin: 30px;
+    border-radius: 5px;
+}
+
+.product {
+    direction: rtl;
+    display: flex;
+    padding: 20px;
+}
+
+.productimg>img {
+    width: 300px;
+}
+
+.info {
+    margin: 30px;
+    text-align: right;
+}
+
+.name>h1 {
+    font-size: 25px;
+    color: black;
+}
+
+
+.price_range>h2 {
+    font-family: Yekan;
+    color: #d73948;
+    padding-top: 30px;
+}
+
+.bottem_container {
+    display: flex;
+    width: 65%;
+}
+
+.details {
+    background-color: white;
+    width: 50%;
+    padding: 30px 20px;
+    direction: rtl;
+    border-radius: 5px;
+}
+
+.details>h1 {
+    /* direction: rtl; */
+    font-size: 20px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.detailsheader {
+    border-bottom: 1px solid rgb(204, 204, 204);
+    font-family: Yekan;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+.details>div>h2 {
+    margin-bottom: 20px;
+}
+
+.offers_container {
+    background-color: white;
+    margin-left: 30px;
+    width: 100%;
+    border-radius: 5px;
+    direction: rtl;
+    padding-top: 30px;
+}
+
+.offers_container>h1 {
+    font-size: 21px;
+    color: black;
+    margin-bottom: 20px;
+    padding: 0 30px;
+}
+
+.offer_card {
+    display: grid;
+    grid-template-columns: 157px minmax(0, 1fr) minmax(0, 128px);
+    padding-bottom: 16px;
+    border-bottom: 1px solid #dfe3e8;
+    padding-right: 24px;
+    padding-left: 24px;
+}
+
+.store > h2 {
+    font-family: Yekan;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.store > p {
+    color: #808080;
+    font-size: 15px;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.store_info {
+    padding-left: 20px;
+    margin-top: 25px;
+}
+
+.store_info > h2 {
+    font-family: Yekan;
+    font-size: 16px;
+}
+.store_info > div {
+    padding-top: 13px;
+}
+
+.purchase {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.purchase > button {
+    width: 80%;
+    margin-top: 5px;
+    border: none;
+    font-size: 15px;
+    font-family: Yekan;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.price {
+    color: #d73948;
+}
+.buy {
+    background-color: #179c4f;
+}
+.report {
+    background-color: #db4141;
+}
+
