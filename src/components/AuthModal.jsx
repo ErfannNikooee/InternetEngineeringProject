@@ -6,7 +6,7 @@ import close from '../assets/close.svg';
 import open from '../assets/open.png';
 import closed from '../assets/closed.png';
 import AuthService from '../services/auth.service'
-import {useLocation} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 import {
     VALIDATOR_REQUIRE,
     VALIDATOR_MINLENGTH,
@@ -14,13 +14,12 @@ import {
     VALIDATOR_EMAIL
 } from './validators';
 
-export default function AuthModal({isOpen,closeModal,location}){
+export default function AuthModal({isOpen,closeModal}){
     const [eye, eyestatus] = useState(open);
     const [isLogin,setIsLogin] = useState(true)
     const [showPass, setShow] = useState("password");
 
-    const history = useLocation()
-    console.log("history: ",history)
+    let navigate = useNavigate()
 
     useEffect(() => {
         console.log(isOpen)
@@ -28,16 +27,20 @@ export default function AuthModal({isOpen,closeModal,location}){
 
     const handleAuth = () => {
         if (isLogin){
-            loginHandler()
+            loginHandler().then(res => {
+                console.log("navigating")
+                navigate(0)
+            })
         }else{
             signupHandler()
         }
+       
     }
 
     function loginHandler () {
         let username = document.getElementById("username").value;
         let password = document.getElementById("password").value;
-        AuthService.login(username,password).then(res => {
+        return AuthService.login(username,password).then(res => {
             console.log("login success")
         }).catch(err => {
             console.log("login failed")

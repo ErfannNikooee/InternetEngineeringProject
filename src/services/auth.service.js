@@ -1,5 +1,8 @@
 
 import axios from "axios"
+import authHeader from "./authHeader"
+import userService from "./user.service"
+
 const API_URL = "http://localhost:8080/"
 
 class AuthService{
@@ -22,6 +25,17 @@ class AuthService{
 
     logout(){
         localStorage.removeItem("token")
+        userService.clearFavourites()
+        userService.clearLastVisited()
+    }
+    async validateToken(){
+        return axios.get(API_URL + "validateToken", {
+            headers : authHeader()
+        }).then(res => {            
+            return res.data
+        }).catch(err => {
+            throw err
+        })
     }
 
     async register(email,username,password){
