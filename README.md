@@ -24,7 +24,7 @@ React was used for Front and Go was used for Back.
 ##  Home page  
 
 ![Screenshot (1)](https://user-images.githubusercontent.com/95939538/176985727-ebc34503-b7f7-47d4-b82f-b381b360407d.png)
-In this page, User can enter the registration or login section and sign up a new account or login to his/her account.\
+On this page, User can enter the registration or login section and sign up a new account or login to his/her account.\
 Also, User can search for the desired product or select a category of products from the menus on the navbar of the page.
 
 در این صفحه، کاربر میتواند وارد بخش ثبت نام یا ورود بشود و به حساب خود وارد شود یا حساب جدید بسازد.\
@@ -33,13 +33,19 @@ Also, User can search for the desired product or select a category of products f
  \
   \
 ![Screenshot (2)](https://user-images.githubusercontent.com/95939538/176985926-a667e30b-0cb9-47a3-88be-2af94c0ec66e.png)
-This is Modal which appears after clicking on Sign up button in navbar.\
+This is a Modal which appears after clicking on Sign up button in navbar.\
 User can switch between sign-up and login modes by clicking on thw link under the sign up button.
 
 این یک Modal است که بعد از کلیک بر روی دکمه‌ی ثبت نام در نوبار ظاهر میشود.\
 کاربر میتواند با کلیک بر روی لینک زیر دکمه‌ی ثبت نام بین حالت های ثبت نام و ورود جا به جا شود.
 
 ## Search results page 
+![Screenshot (270)](https://user-images.githubusercontent.com/95939538/177011061-e933c0e4-9d64-4b8b-b5ef-d058d8947883.png)
+This page shows the results of the user's search or a category that the user asked for
+User can choose other categories or apply a filter on the products or view the information of a product and add it to his favorite list.
+
+این صفحه، نتایج جستجوی کاربر یا یک دسته بندی‌ای که کاربر خواسته را نشان میدهد.\
+در این صفحه، کاربر میتواند دسته بندی های دیگر را انتخاب کند یا بر روی کالا ها فیلتر اعمال کند یا اطلاعات یک کالا را مشاهده کند \و آنرا به لیست محبوب های خود اضافه کند.
 
 ## Product page
 

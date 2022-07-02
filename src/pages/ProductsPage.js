@@ -35,7 +35,6 @@ export default function ProductsPage() {
 
 
     return (
-
         <div className="ProductsPage">
             <Navbar links={categories} />
             <div className={styles.container}>

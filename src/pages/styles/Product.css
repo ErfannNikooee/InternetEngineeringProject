@@ -40,10 +40,15 @@ h2 {
 .info {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    direction: rtl;
     font: menu;
     font-size: large;
-    width: 100%;
+    width: 100%; 
+    font-family: Yekan;
+    color: #d73948;
+    /* padding-right: 130px; */
+    
 }
 
 .addtofav {

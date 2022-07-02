@@ -4,6 +4,7 @@ import productService from "../services/product.service";
 import Navbar from '../components/Navbar';
 import styles from './styles/ProductDetails.module.css';
 import useAuth from "../hooks/useAuth";
+import userService from "../services/user.service";
 
 export default function ProductDetails() {
 
@@ -17,7 +18,6 @@ export default function ProductDetails() {
     const user = useAuth()
 
     useEffect(() => {
-        console.log("called useeffect")
         productService.getProduct(productId).then(data => {
             console.log("products -> ",data)
             setProduct(data)
@@ -25,6 +25,14 @@ export default function ProductDetails() {
             console.log(err)
         })
     },[])
+
+    useEffect(() => {
+        //console.log(product)
+        console.log("adding to last visited")
+        if(product.id){
+            userService.addToLastVisited(product)
+        }
+    },[product])
 
     useEffect(() => {
         productService.GetProductOffers(productId).then(data => {
