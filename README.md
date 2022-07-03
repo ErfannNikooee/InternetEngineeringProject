@@ -45,7 +45,7 @@ This page shows the results of the user's search or a category that the user ask
 User can choose other categories or apply a filter on the products or view the information of a product and add it to his favorite list.
 
 این صفحه، نتایج جستجوی کاربر یا یک دسته بندی‌ای که کاربر خواسته را نشان میدهد.\
-در این صفحه، کاربر میتواند دسته بندی های دیگر را انتخاب کند یا بر روی کالا ها فیلتر اعمال کند یا اطلاعات یک کالا را مشاهده کند \و آنرا به لیست محبوب های خود اضافه کند.
+در این صفحه، کاربر میتواند دسته بندی های دیگر را انتخاب کند یا بر روی کالا ها فیلتر اعمال کند یا اطلاعات یک کالا را مشاهده کند و آنرا به لیست محبوب های خود اضافه کند.
 
 ## Product page
 
