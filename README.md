@@ -48,11 +48,27 @@ User can choose other categories or apply a filter on the products or view the i
 در این صفحه، کاربر میتواند دسته بندی های دیگر را انتخاب کند یا بر روی کالا ها فیلتر اعمال کند یا اطلاعات یک کالا را مشاهده کند و آنرا به لیست محبوب های خود اضافه کند.
 
 ## Product page
+![photo_2022-07-03_18-25-54](https://user-images.githubusercontent.com/95939538/177043189-16128fe3-1fd7-4bc5-b0ba-e943518510ef.jpg)
+This page shows the information of the product selected by User and the stores that offer it.
+User can be transferred to the store page by clicking the "buy" button.
+Also, User can file a violation report about a store by clicking the "report" button.
+
+این صفحه، اطلاعات کالای انتخاب شده توسط کاربر و فروشگاه هایی که آن را عرضه میکنند را نشان میدهد.\
+کاربر میتواند با کلیک بر دکمه ی خرید ،‌به صفحه ی فروشگاه منتقل بشود.\
+همچنین کاربر میتواند  با کلیک بر دکمه ی گزارش، در مورد یک فروشگاه گزارش تخلف ثبت کند. 
+
 
 ## User's profile page
+![photo_2022-07-03_18-26-01](https://user-images.githubusercontent.com/95939538/177043470-d94ddb58-776c-40bc-af5d-a23f2b4459a3.jpg)
+![photo_2022-07-03_18-37-29](https://user-images.githubusercontent.com/95939538/177043479-2867b2b6-7a4d-4459-9379-07411ce61a3d.jpg)
 
+These two pages show User's profile. There are two types of users: normal user and store owner\
+On the profile page of a normal user(pic-2), there are only two lists of popular items and a list of recent views.\
+On the store owner's profile page (pic-1), in addition to the previous lists, you can see the list of stores defined by the owner.
 
-
+این دو صفحه، پروفایل کاربر را نشان میدهد.دو نوع کاربر وجود دارد:کاربر عادی و صاحب فروشگاه\
+در صفحه ی پروفایل کاربر عادی(عکس دوم)، تنها دو لیست کالاهای محبوب و لیست بازدید های اخیر وجود دارند.\
+در صفحه ی پروفایل صاحب فروشگاه(عکس اول)، علاوه بر دو لیست قبلی، میتوان لیست فروشگاه های تعریف شده توسط صاحب را مشاهده کرد. 
 
 # Getting Started with Create React App
 
